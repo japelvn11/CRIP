@@ -66,7 +66,12 @@
                                             <div class="row">
                                                 <label class="col-sm-3 control-label">Password</label>
                                                 <div class="col-sm-9">
-                                                    <input type="password" name="password" placeholder="Password"  class="form-control" required>
+                                                    <div class="input-group">
+                                                    <input type="password" name="password" class="form-control" placeholder="Enter password" aria-label="Enter password" id="password" required>
+                                                    <div class="input-group-append">
+                                                    <span class="input-group-text"><i class="fa fa-eye" aria-hidden="true"></i></span>
+                                                    </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

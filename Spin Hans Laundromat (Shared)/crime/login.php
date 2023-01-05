@@ -100,7 +100,12 @@ else {?>
                                     </div>
                                     <div class="form-group">
                                         <label>Password</label>
-                                        <input type="password" name="password" class="form-control" placeholder="Password" required="">
+                                        <div class="input-group">
+  					<input type="password" name="password" class="form-control" placeholder="Enter password" aria-label="Enter password" id="password" required>
+  					<div class="input-group-append">
+    					<span class="input-group-text"><i class="fa fa-eye" aria-hidden="true"></i></span>
+  					</div>
+					</div>
                                     </div>
                                     <div class="checkbox">
                                         <label>

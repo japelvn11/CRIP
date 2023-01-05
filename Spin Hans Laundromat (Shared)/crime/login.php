@@ -100,7 +100,12 @@ else {?>
                                     </div>
                                     <div class="form-group">
                                         <label>Password</label>
-                                        <input type="password" name="password" class="form-control" placeholder="Password" required="">
+                                        <div class="input-group">
+  					<input type="password" name="password" class="form-control" placeholder="Enter password" aria-label="Enter password" id="password" required>
+  					<div class="input-group-append">
+    					<span class="input-group-text"><i class="fa fa-eye" aria-hidden="true"></i></span>
+  					</div>
+					</div>
                                     </div>
                                     <div class="checkbox">
                                         <label>
@@ -139,6 +144,29 @@ else {?>
     <script src="js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
     <!--Custom JavaScript -->
     <script src="js/custom.min.js"></script>
+
+<script>
+    const passwordInput = document.getElementById('password');
+    const eyeIcon = document.querySelector('.fa-eye');
+
+    eyeIcon.addEventListener('click', function() {
+    if (passwordInput.type === 'password') {
+    passwordInput.type = 'text';
+    eyeIcon.classList.remove('fa-eye');
+    eyeIcon.classList.add('fa-eye-slash');
+    } else {
+    passwordInput.type = 'password';
+    eyeIcon.classList.remove('fa-eye-slash');
+    eyeIcon.classList.add('fa-eye');
+    }
+    });
+</script>
+
+<style>
+    .input-group-text {
+    cursor: pointer;
+    }
+</style>
 
 </body>
 
